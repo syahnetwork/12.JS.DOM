@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a name="sumatera" href="#">pulau sumatera</a><br />
+    <a name="jawa" href="#">pulau jawa</a><br />
+    <a name="kalimantan" href="#">pulau kalimantan</a><br />
+    <!-- <a name="papua" href="#">pulau papua</a><br /> -->
+
+    <p id="contoh">contoh</p>
+
+    <button onclick="tombol()">klik</button>
+
+    <script type="text/javascript">
+      tombol = () => {
+        let a = document.anchors.length;
+        document.getElementById('contoh').innerHTML = a;
+      };
+    </script>
+  </body>
+</html>

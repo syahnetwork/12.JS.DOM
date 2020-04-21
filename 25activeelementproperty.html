@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      nama lengkap
+      <input type="text" value="field" onclick="tombol()" /><button>
+        klik
+      </button>
+    </p>
+
+    <p id="contoh">contoh</p>
+
+    <script type="text/javascript">
+      tombol = () => {
+        let a = document.activeElement.tagName;
+        document.getElementById('contoh').innerHTML = a;
+      };
+    </script>
+  </body>
+</html>
