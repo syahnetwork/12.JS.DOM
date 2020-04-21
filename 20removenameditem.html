@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .contohcss {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" onclick="tombol()" name="button">klik</button><br />
+
+    <h1>hello</h1>
+
+    <input type="button" value="siap" />
+    <script type="text/javascript">
+      tombol = () => {
+        let a = document.getElementsByTagName('input')[0];
+
+        a.attributes.removeNamedItem('value');
+        a.attributes.removeNamedItem('type');
+      };
+    </script>
+  </body>
+</html>
