@@ -1,0 +1,3 @@
+show = () => {
+  alert('alert show')
+}
