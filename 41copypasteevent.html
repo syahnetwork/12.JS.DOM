@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" onpaste="pasteText()" value="coba copy text ini" />
+
+    <p id="object_text"></p>
+
+    <script type="text/javascript">
+      copyText = () => {
+        document.getElementById('object_text').innerHTML = 'kamu telah copy';
+      };
+      pasteText = () => {
+        document.getElementById('object_text').innerHTML = 'kamu telah paste';
+      };
+    </script>
+  </body>
+</html>

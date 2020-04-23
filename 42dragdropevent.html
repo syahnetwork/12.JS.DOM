@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .droptarget {
+        float: left;
+        width: 100px;
+        height: 35px;
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid #aaaaaa;
+      }
+    </style>
+  </head>
+  <body>
+    <p>drag element diantara dua kotak</p>
+
+    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <p
+        ondragstart="dragStart(event)"
+        ondrag="dragging(event)"
+        draggable="true"
+        id="dragtarget"
+      >
+        drag me
+      </p>
+    </div>
+
+    <div
+      class="droptarget"
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+    ></div>
+
+    <p id="object_text"></p>
+
+    <script type="text/javascript">
+      function dragStart(event) {
+        event.dataTransfer.setData('Text', event.target.id);
+      }
+
+      function dragging(event) {
+        document.getElementById('object_text').innerHTML =
+          'element sedang didrag';
+      }
+
+      function allowDrop() {
+        event.preventDefault();
+      }
+
+      function drop() {
+        event.preventDefault();
+        let data = event.dataTransfer.getData('Text');
+        event.target.appendChild(document.getElementById(data));
+        document.getElementById('object_text').innerHTML =
+          'element sudah di drop';
+      }
+    </script>
+  </body>
+</html>

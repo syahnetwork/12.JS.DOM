@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>textbox akan berubah saat dilakukan keyevent</p>
+
+    ini keypress :
+    <input type="text" name="" id="" onkeypress="changeTextbox(this)" /> ini
+    keydown :
+    <input type="text" name="" id="" onkeydown="changeTextbox(this)" /> ini
+    keyup : <input type="text" name="" id="" onkeyup="changeTextbox(this)" />
+
+    <script type="text/javascript">
+      function changeTextbox(x) {
+        x.style.background = 'blue';
+      }
+    </script>
+  </body>
+</html>
