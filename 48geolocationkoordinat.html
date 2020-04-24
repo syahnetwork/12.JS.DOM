@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>klik tombol untuk mendapatkan koordinat</p>
+
+    <button onclick="getLocation()">get position</button>
+
+    <p id="lokasi"></p>
+    <script type="text/javascript">
+      function getLocation() {
+        let x = document.getElementById('lokasi');
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = 'geolocation not supported by browser';
+        }
+
+        function showPosition(position) {
+          x.innerHTML =
+            'latitude = ' +
+            position.coords.latitude +
+            '<br>longitude = ' +
+            position.coords.longitude;
+        }
+      }
+    </script>
+  </body>
+</html>
