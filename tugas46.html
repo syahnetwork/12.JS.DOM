@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>click untuk merubah warna</p>
+
+    <button onclick="myFunction()">ubah warna</button>
+
+    <script>
+      function myFunction() {
+        let warna = prompt('change color', 'blue');
+        switch (warna) {
+          case 'yellow':
+            document.body.style.backgroundColor = 'yellow';
+            break;
+          case 'black':
+            document.body.style.backgroundColor = 'black';
+            break;
+          default:
+            document.body.style.backgroundColor = 'blue';
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

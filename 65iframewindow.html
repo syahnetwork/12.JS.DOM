@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="callFrame()">buka link</button><br /><br />
+
+    <iframe src="" width="500" height="400"></iframe>
+    <iframe src="" width="500" height="400"></iframe>
+
+    <script>
+      function callFrame() {
+        window.frames[0].location = 'https://www.udemy.com/';
+      }
+    </script>
+  </body>
+</html>

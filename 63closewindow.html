@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="openWin()">buka window</button>
+    <button onclick="closeWin()">tutup window</button>
+
+    <script>
+      let myWindow;
+
+      function openWin() {
+        myWindow = window.open('', 'adam', 'width=500,height=400');
+        myWindow.document.write('<p>berhasil membuka window</p>');
+      }
+
+      function closeWin() {
+        myWindow.close();
+      }
+    </script>
+  </body>
+</html>
